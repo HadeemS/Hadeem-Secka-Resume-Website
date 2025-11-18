@@ -40,7 +40,7 @@ export const skillCategories = [
   }
 ]
 
-// Projects from your GitHub profile - pinned repositories
+// Projects - Essential portfolio projects
 export const projects = [
   {
     title: 'Game Day',
@@ -48,95 +48,31 @@ export const projects = [
       'A React-based web application for tracking and managing game day events, scores, and highlights. Built with Create React App featuring a modern, responsive user interface.',
     techStack: ['React', 'JavaScript', 'CSS', 'HTML'],
     codeUrl: 'https://github.com/HadeemS/game-day',
-    liveUrl: null
+    liveUrl: 'https://hadeems.github.io/game-day/'
   },
   {
     title: 'Game Day API',
     description:
-      'RESTful API backend for the Game Day application, handling data management and server-side logic for game events and scores.',
-    techStack: ['API', 'Backend', 'HTML'],
+      'RESTful API backend for the Game Day application, handling data management and server-side logic for game events and scores. Features live JSON preview, POST endpoints, and real-time data updates.',
+    techStack: ['API', 'Backend', 'Node.js', 'Express'],
     codeUrl: 'https://github.com/HadeemS/game-day-api',
-    liveUrl: null
+    liveUrl: 'https://game-day-api-1.onrender.com/'
   },
   {
     title: 'Gameday Server',
     description:
       'Server-side application for the Game Day platform, managing data persistence, business logic, and API endpoints.',
-    techStack: ['Node.js', 'Server', 'Backend'],
+    techStack: ['Node.js', 'Express', 'Server', 'Backend'],
     codeUrl: 'https://github.com/HadeemS/Gameday-Server',
     liveUrl: null
   },
   {
-    title: 'Official Portfolio',
+    title: '242 Coursework Portfolio',
     description:
-      'Official portfolio website built with Vite and React, showcasing projects, skills, and professional experience with a modern, polished design.',
-    techStack: ['React', 'Vite', 'JavaScript', 'CSS'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka-Official.github.io',
-    liveUrl: null
-  },
-  {
-    title: 'Resume Portfolio Website',
-    description:
-      'A high-energy, dark-mode portfolio website built with React and Vite that showcases my projects, experience, and personality with smooth animations and responsive design.',
-    techStack: ['React', 'Vite', 'CSS', 'JavaScript'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka-Resume-Website',
-    liveUrl: null
-  },
-  {
-    title: 'Personal Website',
-    description:
-      'Personal website and portfolio built with HTML, CSS, and JavaScript, showcasing my work, professional information, and projects with a clean, accessible design.',
-    techStack: ['HTML', 'CSS', 'JavaScript'],
+      'CSCE 242 Web Applications course portfolio showcasing assignments and projects including HTML/CSS layouts, JavaScript interactions, React applications, and API integrations.',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'],
     codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
     liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
-  },
-  {
-    title: 'GameDay - React Site',
-    description:
-      'Full React application built with Vite for the GameDay platform. Features responsive design, modern UI components, and seamless user experience for tracking game events.',
-    techStack: ['React', 'Vite', 'JavaScript', 'CSS'],
-    codeUrl: 'https://github.com/HadeemS/game-day',
-    liveUrl: null
-  },
-  {
-    title: 'GameDay - HTML/CSS Build',
-    description:
-      'Complete HTML/CSS implementation of all GameDay wireframe pages with responsive layouts, semantic HTML5 elements, and polished styling. Foundation for the React version.',
-    techStack: ['HTML', 'CSS', 'Responsive Design'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
-    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
-  },
-  {
-    title: 'GameDay - JSON-Powered Teams',
-    description:
-      'Dynamic teams list generated from a JSON file hosted on GitHub Pages, demonstrating data-driven content generation and JSON integration.',
-    techStack: ['JavaScript', 'JSON', 'HTML', 'CSS'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
-    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
-  },
-  {
-    title: 'GameDay - Contact Form & Map',
-    description:
-      'Asynchronous email form with live success/error feedback and responsive embedded map integration. No page redirect, seamless user experience.',
-    techStack: ['JavaScript', 'HTML', 'CSS', 'API Integration'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
-    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
-  },
-  {
-    title: 'API Integration Project',
-    description:
-      'React form with POST requests, client-side validation, and automatic list updates. Features server-side Joi validation for robust data handling and error management.',
-    techStack: ['React', 'Node.js', 'Express', 'Joi Validation', 'API'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
-    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
-  },
-  {
-    title: 'Hello World - Node + Express',
-    description:
-      'Simple Express server deployed on Render demonstrating server setup, environment variables, and deployment practices using process.env.PORT.',
-    techStack: ['Node.js', 'Express', 'Render'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
-    liveUrl: null
   }
 ]
 

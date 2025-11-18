@@ -26,6 +26,7 @@ const Projects = ({ projects }) => {
                   className="btn btn-sm btn-primary"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={`View ${project.title} live demo`}
                 >
                   View Live
                 </a>
@@ -36,8 +37,9 @@ const Projects = ({ projects }) => {
                   className="btn btn-sm btn-ghost"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={`View ${project.title} source code on GitHub`}
                 >
-                  View Code
+                  View on GitHub
                 </a>
               )}
             </div>

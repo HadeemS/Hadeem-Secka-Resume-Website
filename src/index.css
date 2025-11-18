@@ -1,16 +1,16 @@
 /* ====== Base & Theme ====== */
 
 :root {
-  --bg-main: #050816;
-  --bg-elevated: rgba(13, 23, 42, 0.85);
-  --bg-card: rgba(15, 23, 42, 0.9);
-  --accent: #38bdf8; /* neon cyan */
-  --accent-soft: #6366f1; /* electric indigo */
-  --accent-pink: #ec4899;
+  --bg-main: #000000;
+  --bg-elevated: rgba(10, 10, 10, 0.85);
+  --bg-card: rgba(15, 15, 15, 0.9);
+  --accent: #ff4500; /* lava red */
+  --accent-soft: #ff3300; /* deep lava red */
+  --accent-pink: #ff6347; /* coral red */
   --text-main: #f9fafb;
   --text-muted: #9ca3af;
-  --border-subtle: rgba(148, 163, 184, 0.3);
-  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+  --border-subtle: rgba(255, 69, 0, 0.3);
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.9);
   --radius-lg: 18px;
   --radius-full: 999px;
   --nav-height: 70px;
@@ -32,7 +32,7 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
     'Inter', sans-serif;
-  background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+  background: radial-gradient(circle at top, #0a0a0a 0, #000000 45%, #000000 100%);
   color: var(--text-main);
 }
 
@@ -139,11 +139,11 @@ main {
   align-items: center;
   justify-content: space-between;
   padding-inline: 1.5rem;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(15, 15, 15, 0.9);
   background: linear-gradient(
     to bottom,
-    rgba(15, 23, 42, 0.92),
-    rgba(15, 23, 42, 0.65),
+    rgba(15, 15, 15, 0.92),
+    rgba(15, 15, 15, 0.65),
     transparent
   );
 }
@@ -166,7 +166,7 @@ main {
   font-weight: 700;
   font-size: 0.85rem;
   color: #020617;
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 18px rgba(255, 69, 0, 0.7);
 }
 
 .logo-text {
@@ -199,14 +199,14 @@ main {
 
 .nav-link:hover {
   color: var(--text-main);
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 15, 15, 0.9);
   transform: translateY(-1px);
 }
 
 .nav-link-active {
   background: radial-gradient(circle at top left, var(--accent), var(--accent-soft));
   color: #020617;
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 12px 30px rgba(255, 69, 0, 0.5);
 }
 
 /* ====== Sections ====== */
@@ -222,8 +222,8 @@ main {
 .section-card {
   background: linear-gradient(
       145deg,
-      rgba(15, 23, 42, 0.95),
-      rgba(15, 23, 42, 0.85)
+      rgba(15, 15, 15, 0.95),
+      rgba(15, 15, 15, 0.85)
     );
   border-radius: var(--radius-lg);
   border: 1px solid rgba(148, 163, 184, 0.3);
@@ -279,9 +279,9 @@ main {
 .hero-content {
   padding: 2.8rem 1.8rem 2.4rem;
   border-radius: 24px;
-  background: radial-gradient(circle at top left, #0f172a, #020617 65%, #020617 100%);
+  background: radial-gradient(circle at top left, #0f0f0f, #000000 65%, #000000 100%);
   border: 1px solid rgba(148, 163, 184, 0.4);
-  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.95);
+  box-shadow: 0 26px 70px rgba(15, 15, 15, 0.95);
   position: relative;
   overflow: hidden;
 }
@@ -290,7 +290,7 @@ main {
   content: '';
   position: absolute;
   inset: -1px;
-  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent);
+  background: radial-gradient(circle at top left, rgba(255, 69, 0, 0.18), transparent);
   opacity: 0.8;
   mix-blend-mode: screen;
   pointer-events: none;
@@ -312,7 +312,7 @@ main {
 }
 
 .hero-name {
-  background: linear-gradient(120deg, #e5e7eb, #38bdf8, #ec4899);
+  background: linear-gradient(120deg, #e5e7eb, #ff4500, #ff6347);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -361,22 +361,22 @@ main {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   color: #020617;
-  box-shadow: 0 16px 35px rgba(56, 189, 248, 0.5);
+  box-shadow: 0 16px 35px rgba(255, 69, 0, 0.5);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.65);
+  box-shadow: 0 18px 40px rgba(255, 69, 0, 0.65);
 }
 
 .btn-ghost {
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 15, 15, 0.9);
   color: var(--text-main);
-  border-color: rgba(148, 163, 184, 0.7);
+  border-color: rgba(255, 69, 0, 0.5);
 }
 
 .btn-ghost:hover {
-  background: rgba(15, 23, 42, 1);
+  background: rgba(20, 20, 20, 1);
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-1px);
@@ -437,8 +437,8 @@ main {
 .skill-card {
   background: linear-gradient(
     135deg,
-    rgba(15, 23, 42, 0.95),
-    rgba(15, 23, 42, 0.88)
+    rgba(15, 15, 15, 0.95),
+    rgba(15, 15, 15, 0.88)
   );
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.3);
@@ -466,7 +466,7 @@ main {
   border: 1px solid rgba(148, 163, 184, 0.4);
   font-size: 0.78rem;
   color: var(--text-muted);
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 15, 15, 0.9);
 }
 
 .chip-sm {
@@ -493,10 +493,10 @@ main {
   width: 10px;
   height: 10px;
   border-radius: var(--radius-full);
-  border: 2px solid #0f172a;
+  border: 2px solid #000000;
   background: radial-gradient(circle, var(--accent), var(--accent-soft));
   margin-top: 0.4rem;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.9);
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.9);
 }
 
 .timeline-connector {
@@ -513,7 +513,7 @@ main {
 }
 
 .timeline-content {
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 15, 15, 0.9);
   border-radius: 14px;
   border: 1px solid rgba(148, 163, 184, 0.3);
   padding: 0.9rem 1rem;
@@ -570,7 +570,7 @@ main {
   padding: 1.1rem 1rem;
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.4);
-  background: radial-gradient(circle at top left, #0b1120, #020617 80%);
+  background: radial-gradient(circle at top left, #0b0b0b, #000000 80%);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   transition:
@@ -583,15 +583,17 @@ main {
   content: '';
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent);
+  background: radial-gradient(circle at top left, rgba(255, 69, 0, 0.18), transparent);
   opacity: 0;
   transition: opacity var(--transition-med);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .project-card:hover {
   transform: translateY(-4px) scale(1.01);
   border-color: var(--accent);
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.95);
+  box-shadow: 0 20px 45px rgba(15, 15, 15, 0.95);
 }
 
 .project-card:hover::before {
@@ -619,6 +621,14 @@ main {
 .project-actions {
   display: flex;
   gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-actions a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
 }
 
 /* ====== Contact ====== */
@@ -630,7 +640,7 @@ main {
 }
 
 .contact-form {
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(15, 15, 15, 0.95);
   border-radius: 14px;
   border: 1px solid rgba(148, 163, 184, 0.4);
   padding: 1rem;
@@ -652,7 +662,7 @@ input,
 textarea {
   border-radius: 10px;
   border: 1px solid rgba(148, 163, 184, 0.6);
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 15, 15, 0.9);
   color: var(--text-main);
   padding: 0.55rem 0.7rem;
   font-size: 0.88rem;
@@ -672,8 +682,8 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.5);
-  background: rgba(15, 23, 42, 1);
+  box-shadow: 0 0 0 1px rgba(255, 69, 0, 0.5);
+  background: rgba(15, 15, 15, 1);
 }
 
 .contact-side {
@@ -707,7 +717,7 @@ textarea:focus {
   color: var(--text-main);
   text-decoration: none;
   font-size: 0.88rem;
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 15, 15, 0.9);
   transition:
     border-color var(--transition-fast),
     background var(--transition-fast),
@@ -717,9 +727,9 @@ textarea:focus {
 
 .contact-link:hover {
   border-color: var(--accent);
-  background: rgba(15, 23, 42, 1);
+  background: rgba(15, 15, 15, 1);
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
+  box-shadow: 0 10px 24px rgba(15, 15, 15, 0.9);
 }
 
 .contact-icon {
@@ -769,7 +779,7 @@ textarea:focus {
   color: #020617;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
+  box-shadow: 0 18px 40px rgba(15, 15, 15, 0.95);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -781,7 +791,7 @@ textarea:focus {
 
 .back-to-top:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 50px rgba(15, 23, 42, 1);
+  box-shadow: 0 22px 50px rgba(15, 15, 15, 1);
   border-color: var(--accent-pink);
 }
 

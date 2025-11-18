@@ -19,8 +19,8 @@ const Hero = ({ data, onPrimaryClick, onSecondaryClick }) => {
           </button>
         </div>
         <div className="hero-subtle-note">
-          <span className="dot online" /> Open to software engineering, SWE internships,
-          and creative tech roles.
+          <span className="dot online" /> Open to opportunities in software engineering, 
+          full-stack development, AI/ML, data science, cybersecurity, and related technology roles.
         </div>
       </div>
     </div>
