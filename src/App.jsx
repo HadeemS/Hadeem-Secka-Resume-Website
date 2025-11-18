@@ -5,6 +5,9 @@ import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
 import Experience from './components/Experience.jsx'
+import Education from './components/Education.jsx'
+import Certifications from './components/Certifications.jsx'
+import CampusInvolvement from './components/CampusInvolvement.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
@@ -16,14 +19,21 @@ import {
   skillCategories,
   projects,
   experience,
+  education,
+  coursework,
+  certifications,
+  campusInvolvement,
   socialLinks
 } from './data/siteData.js'
 
 const sectionsConfig = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
+  { id: 'education', label: 'Education' },
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
+  { id: 'certifications', label: 'Certifications' },
+  { id: 'campus', label: 'Campus' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' }
 ]
@@ -108,6 +118,14 @@ const App = () => {
         </section>
 
         <section
+          id="education"
+          className="section section-spacing reveal-on-scroll"
+          aria-label="Education"
+        >
+          <Education education={education} coursework={coursework} />
+        </section>
+
+        <section
           id="skills"
           className="section section-spacing reveal-on-scroll"
           aria-label="Skills"
@@ -121,6 +139,22 @@ const App = () => {
           aria-label="Experience and leadership"
         >
           <Experience items={experience} />
+        </section>
+
+        <section
+          id="certifications"
+          className="section section-spacing reveal-on-scroll"
+          aria-label="Certifications"
+        >
+          <Certifications certifications={certifications} />
+        </section>
+
+        <section
+          id="campus"
+          className="section section-spacing reveal-on-scroll"
+          aria-label="Campus Involvement"
+        >
+          <CampusInvolvement involvement={campusInvolvement} />
         </section>
 
         <section

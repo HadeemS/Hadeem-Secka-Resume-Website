@@ -3,11 +3,10 @@
 
 export const hero = {
   name: 'Hadeem Secka',
-  // Tagline: tweak wording to your vibe
-  tagline: 'Software Engineer • Builder • Creative Technologist',
+  tagline: 'Computer Information Science Student • Data Specialist • Software Developer',
   subtitle: 'Building high-impact digital experiences with clean code and bold ideas.',
   description:
-    'Driven software engineer focused on shipping polished, real-world products. I love bridging design & engineering, experimenting with new tech, and turning ideas into full-stack experiences.',
+    'Computer Information Science student at University of South Carolina with hands-on experience in data management, technical support, and software development. Currently working as a Data Control Specialist while pursuing my degree in Business Analytics.',
   primaryCta: 'View Projects',
   secondaryCta: 'Get In Touch'
 }
@@ -15,106 +14,224 @@ export const hero = {
 export const about = {
   title: 'About Me',
   highlight:
-    'I'm a builder at heart who loves turning ideas into polished experiences.',
+    'Computer Information Science student passionate about data management, software development, and cybersecurity.',
   paragraphs: [
-    'I'm Hadeem Secka, a software engineer who thrives at the intersection of design and engineering. I enjoy working across the stack, from crafting smooth front-end experiences to wiring up robust backend logic.',
-    'I like fast-paced environments, clear ownership, and shipping real features that people actually use. Outside of code, you'll find me exploring new tools, mentoring peers, and experimenting with creative tech projects.'
+    "I'm Hadeem Secka, a Computer Information Science student at the University of South Carolina, pursuing a Bachelor's degree with a minor in Business Analytics. I'm currently working as a Data Control Specialist at the Richland County Sheriff's Department, where I manage data migration projects, provide technical support, and develop comprehensive documentation.",
+    "With hands-on experience in Java, Python, React, and data management, I enjoy building practical solutions that solve real-world problems. I'm also actively involved in campus organizations, serving as Vice President of Minorities in Computing and as a member of the National Society of Black Engineers."
   ]
 }
 
 export const skillCategories = [
   {
-    label: 'Core',
-    skills: ['Java', 'JavaScript', 'TypeScript', 'Python', 'C#']
+    label: 'Programming Languages',
+    skills: ['Java', 'Python', 'HTML', 'CSS', 'JavaScript', 'React', 'Node.js']
   },
   {
-    label: 'Frontend',
-    skills: ['React', 'Vite', 'HTML5', 'CSS3', 'Responsive Design']
+    label: 'Software & Tools',
+    skills: ['Microsoft Excel', 'Microsoft Word', 'Microsoft Access', 'Microsoft PowerPoint', 'Git', 'GitHub']
   },
   {
-    label: 'Backend & Tools',
-    skills: ['Node.js', 'REST APIs', 'Git', 'GitHub', 'CI/CD Basics']
+    label: 'Operating Systems',
+    skills: ['Windows 11', 'UNIX/Linux']
   },
   {
-    label: 'Ecosystem',
-    skills: ['npm', 'VS Code', 'Agile / Scrum', 'Unit Testing']
+    label: 'Technical Skills',
+    skills: ['Data Monitoring', 'Data Reporting', 'Data Migration', 'Hardware Installation', 'Technical Support', 'Strong Communication']
   }
 ]
 
-// Projects from your GitHub profile
+// Projects from your GitHub profile - pinned repositories
 export const projects = [
   {
-    title: 'Video Game Database',
+    title: 'Game Day',
     description:
-      'A Java program that allows users to load and search a video game database using a custom generic linked list. Features search by game title, console, or both with partial matches and wildcard support.',
-    techStack: ['Java', 'Data Structures', 'Linked Lists', 'File I/O'],
-    codeUrl: 'https://github.com/HadeemS/VideoGameDatabase'
+      'A React-based web application for tracking and managing game day events, scores, and highlights. Built with Create React App featuring a modern, responsive user interface.',
+    techStack: ['React', 'JavaScript', 'CSS', 'HTML'],
+    codeUrl: 'https://github.com/HadeemS/game-day',
+    liveUrl: null
   },
   {
-    title: 'Sorting Laundry Java',
+    title: 'Game Day API',
     description:
-      'A Java application demonstrating sorting algorithms and data structure implementations for organizing and managing laundry items.',
-    techStack: ['Java', 'Algorithms', 'Sorting'],
-    codeUrl: 'https://github.com/HadeemS/Sorting-Laundry-Java'
+      'RESTful API backend for the Game Day application, handling data management and server-side logic for game events and scores.',
+    techStack: ['API', 'Backend', 'HTML'],
+    codeUrl: 'https://github.com/HadeemS/game-day-api',
+    liveUrl: null
   },
   {
-    title: 'Java Projects Collection',
+    title: 'Gameday Server',
     description:
-      'A collection of Java projects showcasing various programming concepts, algorithms, and software engineering practices.',
-    techStack: ['Java', 'Object-Oriented Programming', 'Algorithms'],
-    codeUrl: 'https://github.com/HadeemS/Java-Projects'
+      'Server-side application for the Game Day platform, managing data persistence, business logic, and API endpoints.',
+    techStack: ['Node.js', 'Server', 'Backend'],
+    codeUrl: 'https://github.com/HadeemS/Gameday-Server',
+    liveUrl: null
   },
   {
-    title: 'Personal Portfolio Website',
+    title: 'Official Portfolio',
+    description:
+      'Official portfolio website built with Vite and React, showcasing projects, skills, and professional experience with a modern, polished design.',
+    techStack: ['React', 'Vite', 'JavaScript', 'CSS'],
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka-Official.github.io',
+    liveUrl: null
+  },
+  {
+    title: 'Resume Portfolio Website',
     description:
       'A high-energy, dark-mode portfolio website built with React and Vite that showcases my projects, experience, and personality with smooth animations and responsive design.',
     techStack: ['React', 'Vite', 'CSS', 'JavaScript'],
-    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka-Resume-Website'
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka-Resume-Website',
+    liveUrl: null
+  },
+  {
+    title: 'Personal Website',
+    description:
+      'Personal website and portfolio built with HTML, CSS, and JavaScript, showcasing my work, professional information, and projects with a clean, accessible design.',
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
+    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
+  },
+  {
+    title: 'GameDay - React Site',
+    description:
+      'Full React application built with Vite for the GameDay platform. Features responsive design, modern UI components, and seamless user experience for tracking game events.',
+    techStack: ['React', 'Vite', 'JavaScript', 'CSS'],
+    codeUrl: 'https://github.com/HadeemS/game-day',
+    liveUrl: null
+  },
+  {
+    title: 'GameDay - HTML/CSS Build',
+    description:
+      'Complete HTML/CSS implementation of all GameDay wireframe pages with responsive layouts, semantic HTML5 elements, and polished styling. Foundation for the React version.',
+    techStack: ['HTML', 'CSS', 'Responsive Design'],
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
+    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
+  },
+  {
+    title: 'GameDay - JSON-Powered Teams',
+    description:
+      'Dynamic teams list generated from a JSON file hosted on GitHub Pages, demonstrating data-driven content generation and JSON integration.',
+    techStack: ['JavaScript', 'JSON', 'HTML', 'CSS'],
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
+    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
+  },
+  {
+    title: 'GameDay - Contact Form & Map',
+    description:
+      'Asynchronous email form with live success/error feedback and responsive embedded map integration. No page redirect, seamless user experience.',
+    techStack: ['JavaScript', 'HTML', 'CSS', 'API Integration'],
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
+    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
+  },
+  {
+    title: 'API Integration Project',
+    description:
+      'React form with POST requests, client-side validation, and automatic list updates. Features server-side Joi validation for robust data handling and error management.',
+    techStack: ['React', 'Node.js', 'Express', 'Joi Validation', 'API'],
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
+    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/'
+  },
+  {
+    title: 'Hello World - Node + Express',
+    description:
+      'Simple Express server deployed on Render demonstrating server setup, environment variables, and deployment practices using process.env.PORT.',
+    techStack: ['Node.js', 'Express', 'Render'],
+    codeUrl: 'https://github.com/HadeemS/Hadeem-Secka.github.io',
+    liveUrl: null
   }
 ]
 
 export const experience = [
   {
-    role: 'Software Engineering Intern',
-    company: 'Tech Startup Inc.',
-    location: 'Remote',
-    date: 'Summer 2024',
+    role: 'Data Control Specialist',
+    company: 'Richland County Sheriff\'s Department',
+    location: 'Columbia, SC',
+    date: '11/2024 – Current',
     bullets: [
-      'Built and shipped features in a React/Node.js stack used by real customers.',
-      'Collaborated with designers and PMs to refine UX flows and improve usability.',
-      'Contributed to code reviews, documentation, and test coverage.'
+      'Provided technical support, resolving IT issues to maximize productivity for team members.',
+      'Developed comprehensive documentation for data control procedures, facilitating cross-training among team members.',
+      'Managed large-scale data migration projects, ensuring seamless transitions with minimal downtime.'
     ]
   },
   {
-    role: 'Chapter President',
-    company: 'CS Student Organization',
-    location: 'Your University',
-    date: '2023 – 2024',
+    role: 'Front Desk Agent',
+    company: 'Hertz',
+    location: 'Columbia, SC',
+    date: '05/2025 – Current',
     bullets: [
-      'Led a team of officers to organize workshops, hack nights, and speaker events.',
-      'Coordinated with industry partners to bring internship and career resources to members.',
-      'Mentored newer students on navigating CS courses and breaking into tech.'
-    ]
-  },
-  {
-    role: 'Technical Project Lead',
-    company: 'Student Hackathon Team',
-    location: 'Your University',
-    date: '2022 – 2023',
-    bullets: [
-      'Architected full-stack project concepts and delegated tasks across a small team.',
-      'Set up GitHub workflows, coding standards, and sprint-based planning.',
-      'Presented final demos to judges and peers with clear technical storytelling.'
+      'Managed reservation system, updating bookings and accommodating guest requests.',
+      'Handled guest inquiries, resolving issues to enhance satisfaction and loyalty.'
     ]
   }
 ]
 
-// Contact information - update email and LinkedIn when available
+// Contact information
 export const socialLinks = {
-  // TODO: Put your email here
-  email: 'youremail@example.com',
+  email: 'hadeemsecka@gmail.com',
+  phone: '839-201-3566',
+  address: 'Columbia, SC 29229',
+  website: 'https://hadeems.github.io/Hadeem-Secka.github.io/',
   github: 'https://github.com/HadeemS',
-  // TODO: Put your actual LinkedIn URL here
-  linkedin: 'https://www.linkedin.com/in/your-handle/'
+  linkedin: 'https://www.linkedin.com/in/hadeem-secka-a7137129b/'
 }
+
+// Education
+export const education = {
+  degree: 'Bachelor of Science, Computer Information Science',
+  minor: 'Business Analytics',
+  university: 'University of South Carolina',
+  location: 'Columbia, SC',
+  expectedGraduation: '12/2026',
+  gpa: '3.1/4.0',
+  honors: ['Life Scholarship', 'Hope Scholarship']
+}
+
+// Coursework
+export const coursework = [
+  'Software Engineering - 247',
+  'Advanced Programming - 240',
+  'Statistical Methods - 515',
+  'Web Applications - 242',
+  'UNIX/Linux Fundamentals - 215',
+  'Computer Hardware Foundations - 210'
+]
+
+// Certifications
+export const certifications = [
+  {
+    name: 'Criminal Justice Information Services Security and Privacy Training (CJIS)',
+    issuer: 'CJIS'
+  },
+  {
+    name: 'Digital Studies',
+    issuer: 'University of South Carolina'
+  },
+  {
+    name: 'Tools of the Trade: Linux and SQL',
+    issuer: 'Google Cybersecurity Certificate'
+  },
+  {
+    name: 'Connect and Protect: Networks and Network Security',
+    issuer: 'Google Cybersecurity Certificate'
+  },
+  {
+    name: 'Play it Safe: Manage Security Risks',
+    issuer: 'Google Cybersecurity Certificate'
+  },
+  {
+    name: 'Foundations of Cybersecurity',
+    issuer: 'Google Cybersecurity Certificate'
+  }
+]
+
+// Campus Involvement
+export const campusInvolvement = [
+  {
+    organization: 'Minorities in Computing',
+    role: 'Vice President'
+  },
+  {
+    organization: 'National Society of Black Engineers',
+    role: 'Member'
+  }
+]
 

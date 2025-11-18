@@ -1,4 +1,4 @@
-# Aaron Williams - Resume Portfolio Website
+# Hadeem Secka - Resume Portfolio Website
 
 A modern, high-energy portfolio website built with React + Vite featuring a dark galaxy theme with smooth animations and responsive design.
 
@@ -23,6 +23,16 @@ A modern, high-energy portfolio website built with React + Vite featuring a dark
    ```bash
    npm run preview
    ```
+
+5. **Deploy to GitHub Pages:**
+   ```bash
+   npm install  # Make sure gh-pages is installed
+   npm run deploy
+   ```
+   
+   **Note:** The site is configured to deploy to `https://yourusername.github.io/Hadeem-Secka-Resume-Website/`
+   
+   If you want to deploy to the root of your GitHub Pages (e.g., `username.github.io`), change the `base` in `vite.config.js` from `'/Hadeem-Secka-Resume-Website/'` to `'/'`.
 
 ## 📁 Project Structure
 
