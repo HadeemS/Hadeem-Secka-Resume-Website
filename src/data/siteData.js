@@ -59,12 +59,20 @@ export const projects = [
     liveUrl: 'https://game-day-api-1.onrender.com/'
   },
   {
-    title: 'Gameday Server',
+    title: 'Loop Functionality',
     description:
-      'Server-side application for the Game Day platform, managing data persistence, business logic, and API endpoints.',
-    techStack: ['Node.js', 'Express', 'Server', 'Backend'],
-    codeUrl: 'https://github.com/HadeemS/Gameday-Server',
-    liveUrl: null
+      'Interactive web application demonstrating JavaScript loops. Features 6 identical clouds and 6 identical trees created with for loops, plus dynamic sun/moon display based on time of day. All visuals are CSS art with no images.',
+    techStack: ['JavaScript', 'HTML', 'CSS', 'Loops'],
+    codeUrl: 'https://github.com/hadeems/Hadeem-Secka.github.io/tree/main/assignments/Assignment7',
+    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/assignments/Assignment7/index.html'
+  },
+  {
+    title: 'Array Functionality',
+    description:
+      'Web application showcasing JavaScript array manipulation and data handling. Demonstrates array operations and dynamic content management.',
+    techStack: ['JavaScript', 'HTML', 'CSS', 'Arrays'],
+    codeUrl: 'https://github.com/hadeems/Hadeem-Secka.github.io/tree/main/assignments/Assignment8',
+    liveUrl: 'https://hadeems.github.io/Hadeem-Secka.github.io/assignments/Assignment8/index.html'
   },
   {
     title: '242 Coursework Portfolio',
