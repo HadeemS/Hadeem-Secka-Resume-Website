@@ -8,57 +8,58 @@
   'use strict';
 
   /* ---------- Matrix Rain Canvas ---------- */
-  const canvas = document.getElementById('matrix-canvas');
-  const ctx = canvas.getContext('2d');
+  var canvas = document.getElementById('matrix-canvas');
 
-  const FONT_SIZE = 14;
-  const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:<>?/~';
+  if (canvas && canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    var FONT_SIZE = 14;
+    var CHARS = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF<>{}[]=/\\';
+    var columns = 0;
+    var drops = [];
 
-  let columns = 0;
-  let drops = [];
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    columns = Math.floor(canvas.width / FONT_SIZE);
-    drops = Array.from({ length: columns }, () =>
-      Math.random() * canvas.height / FONT_SIZE
-    );
-  }
-
-  function drawMatrix() {
-    ctx.fillStyle = 'rgba(10, 10, 10, 0.06)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = '#00aaff';
-    ctx.font = FONT_SIZE + 'px "JetBrains Mono", monospace';
-
-    for (let i = 0; i < drops.length; i++) {
-      const char = CHARS[Math.floor(Math.random() * CHARS.length)];
-      const x = i * FONT_SIZE;
-      const y = drops[i] * FONT_SIZE;
-
-      const brightness = 0.3 + Math.random() * 0.7;
-      ctx.fillStyle = `rgba(0, 170, 255, ${brightness})`;
-      ctx.fillText(char, x, y);
-
-      if (y > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      columns = Math.floor(canvas.width / FONT_SIZE);
+      var newDrops = [];
+      for (var i = 0; i < columns; i++) {
+        newDrops[i] = Math.random() * canvas.height / FONT_SIZE;
       }
-      drops[i] += 0.5 + Math.random() * 0.5;
+      drops = newDrops;
     }
 
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.font = FONT_SIZE + 'px monospace';
+
+      for (var i = 0; i < drops.length; i++) {
+        var char = CHARS[Math.floor(Math.random() * CHARS.length)];
+        var x = i * FONT_SIZE;
+        var y = drops[i] * FONT_SIZE;
+
+        var brightness = 0.4 + Math.random() * 0.6;
+        ctx.fillStyle = 'rgba(0, 170, 255, ' + brightness + ')';
+        ctx.fillText(char, x, y);
+
+        if (y > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i] += 0.4 + Math.random() * 0.6;
+      }
+
+      requestAnimationFrame(drawMatrix);
+    }
+
+    resizeCanvas();
     requestAnimationFrame(drawMatrix);
+
+    window.addEventListener('resize', function () {
+      clearTimeout(window._resizeTimer);
+      window._resizeTimer = setTimeout(resizeCanvas, 150);
+    });
   }
-
-  resizeCanvas();
-  drawMatrix();
-
-  let resizeTimeout;
-  window.addEventListener('resize', function () {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(resizeCanvas, 150);
-  });
 
   /* ---------- Scroll Reveal (Fade-Up) ---------- */
   var fadeElements = document.querySelectorAll('.fade-up');
