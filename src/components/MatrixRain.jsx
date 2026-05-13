@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-/** Binary-style matrix rain (matches static `scripts.js` look, blue accent). */
+/** Binary-style matrix rain (matches static `public/scripts.js` look, blue accent). */
 export default function MatrixRain() {
   const ref = useRef(null)
 
