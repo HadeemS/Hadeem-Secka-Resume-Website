@@ -12,24 +12,27 @@
 
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext('2d');
-    var FONT_SIZE = 14;
-    var CHARS = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF<>{}[]=/\\';
+    var FONT_SIZE = 16;
+    var CHARS = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモ0123456789ABCDEF<>{}[]=/';
     var columns = 0;
     var drops = [];
+    var isMobile = window.innerWidth < 768;
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      isMobile = window.innerWidth < 768;
+      FONT_SIZE = isMobile ? 14 : 16;
       columns = Math.floor(canvas.width / FONT_SIZE);
       var newDrops = [];
       for (var i = 0; i < columns; i++) {
-        newDrops[i] = Math.random() * canvas.height / FONT_SIZE;
+        newDrops[i] = Math.floor(Math.random() * canvas.height / FONT_SIZE);
       }
       drops = newDrops;
     }
 
     function drawMatrix() {
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+      ctx.fillStyle = 'rgba(10, 10, 10, 0.04)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.font = FONT_SIZE + 'px monospace';
@@ -39,14 +42,14 @@
         var x = i * FONT_SIZE;
         var y = drops[i] * FONT_SIZE;
 
-        var brightness = 0.4 + Math.random() * 0.6;
+        var brightness = 0.5 + Math.random() * 0.5;
         ctx.fillStyle = 'rgba(0, 170, 255, ' + brightness + ')';
         ctx.fillText(char, x, y);
 
-        if (y > canvas.height && Math.random() > 0.975) {
+        if (y > canvas.height && Math.random() > 0.98) {
           drops[i] = 0;
         }
-        drops[i] += 0.4 + Math.random() * 0.6;
+        drops[i] += 0.3 + Math.random() * 0.5;
       }
 
       requestAnimationFrame(drawMatrix);
@@ -57,7 +60,11 @@
 
     window.addEventListener('resize', function () {
       clearTimeout(window._resizeTimer);
-      window._resizeTimer = setTimeout(resizeCanvas, 150);
+      window._resizeTimer = setTimeout(resizeCanvas, 200);
+    });
+
+    window.addEventListener('orientationchange', function () {
+      setTimeout(resizeCanvas, 300);
     });
   }
 
