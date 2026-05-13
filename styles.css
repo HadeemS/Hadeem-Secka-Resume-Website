@@ -211,6 +211,22 @@ img {
   border-radius: 2px;
 }
 
+/* ---------- Hero Entrance (CSS-only, no JS needed) ---------- */
+.hero-entrance {
+  animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ---------- Fade-up Scroll Animation ---------- */
 .fade-up {
   opacity: 0;

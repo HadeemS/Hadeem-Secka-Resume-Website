@@ -61,22 +61,36 @@
   });
 
   /* ---------- Scroll Reveal (Fade-Up) ---------- */
-  const fadeElements = document.querySelectorAll('.fade-up');
+  var fadeElements = document.querySelectorAll('.fade-up');
 
-  const fadeObserver = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
+  if ('IntersectionObserver' in window) {
+    var fadeObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
+    );
 
-  fadeElements.forEach(function (el) {
-    fadeObserver.observe(el);
-  });
+    fadeElements.forEach(function (el) {
+      fadeObserver.observe(el);
+    });
+  } else {
+    fadeElements.forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }
+
+  setTimeout(function () {
+    fadeElements.forEach(function (el) {
+      if (!el.classList.contains('visible')) {
+        el.classList.add('visible');
+      }
+    });
+  }, 2000);
 
   /* ---------- Active Nav Section Highlighting ---------- */
   const navLinks = document.querySelectorAll('.nav-link');
