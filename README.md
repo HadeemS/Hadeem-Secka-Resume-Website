@@ -1,6 +1,6 @@
 # Hadeem Secka - Resume Portfolio Website
 
-A modern, high-energy portfolio website built with React + Vite featuring a dark galaxy theme with smooth animations and responsive design.
+A modern, high-energy portfolio website with a dark, tech-forward design and matrix background effect.
 
 ## 🚀 Quick Start
 
@@ -25,14 +25,17 @@ A modern, high-energy portfolio website built with React + Vite featuring a dark
    ```
 
 5. **Deploy to GitHub Pages:**
-   ```bash
-   npm install  # Make sure gh-pages is installed
-   npm run deploy
-   ```
-   
-   **Note:** The site is configured to deploy to `https://yourusername.github.io/Hadeem-Secka-Resume-Website/`
-   
-   If you want to deploy to the root of your GitHub Pages (e.g., `username.github.io`), change the `base` in `vite.config.js` from `'/Hadeem-Secka-Resume-Website/'` to `'/'`.
+   - Push to `main`:
+     ```bash
+     git push origin main
+     ```
+   - In GitHub repo settings, set Pages to:
+     - **Source**: `Deploy from a branch`
+     - **Branch**: `main`
+     - **Folder**: `/(root)`
+
+   This repository is currently served as a static root site (`index.html`, `styles.css`, `scripts.js`).
+   Do not deploy `dist` to `gh-pages` unless you intentionally switch back to a Vite build deployment flow.
 
 ## 📁 Project Structure
 
@@ -105,10 +108,9 @@ In `src/data/siteData.js`, replace all placeholder URLs:
 
 ## 🛠️ Tech Stack
 
-- React 18
-- Vite 5
-- Pure CSS (no CSS frameworks)
-- Vanilla JavaScript (no animation libraries)
+- HTML
+- CSS
+- Vanilla JavaScript
 
 ## 📄 License
 
