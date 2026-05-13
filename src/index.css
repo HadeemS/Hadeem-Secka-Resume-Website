@@ -2,14 +2,14 @@
 
 :root {
   --bg-main: #000000;
-  --bg-elevated: rgba(10, 10, 10, 0.85);
-  --bg-card: rgba(15, 15, 15, 0.9);
-  --accent: #ff4500; /* lava red */
-  --accent-soft: #ff3300; /* deep lava red */
-  --accent-pink: #ff6347; /* coral red */
+  --bg-elevated: rgba(0, 0, 0, 0.92);
+  --bg-card: rgba(12, 14, 22, 0.92);
+  --accent: #00aaff;
+  --accent-soft: #0077cc;
+  --accent-pink: #33ddff;
   --text-main: #f9fafb;
   --text-muted: #9ca3af;
-  --border-subtle: rgba(255, 69, 0, 0.3);
+  --border-subtle: rgba(0, 170, 255, 0.22);
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.9);
   --radius-lg: 18px;
   --radius-full: 999px;
@@ -26,13 +26,15 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #000000;
 }
 
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
     'Inter', sans-serif;
-  background: radial-gradient(circle at top, #0a0a0a 0, #000000 45%, #000000 100%);
+  background-color: #000000;
+  background-image: none;
   color: var(--text-main);
 }
 
@@ -50,18 +52,17 @@ body {
   z-index: -2;
   overflow: hidden;
   pointer-events: none;
+  background-color: #000000;
 }
 
-.bg-grid {
+.matrix-canvas {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-      circle at 1px 1px,
-      rgba(148, 163, 184, 0.18) 1px,
-      transparent 0
-    );
-  background-size: 40px 40px;
-  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.3;
+  filter: contrast(1.05) brightness(0.78);
 }
 
 .bg-orb {
@@ -166,7 +167,7 @@ main {
   font-weight: 700;
   font-size: 0.85rem;
   color: #020617;
-  box-shadow: 0 0 18px rgba(255, 69, 0, 0.7);
+  box-shadow: 0 0 18px rgba(0, 170, 255, 0.7);
 }
 
 .logo-text {
@@ -206,7 +207,7 @@ main {
 .nav-link-active {
   background: radial-gradient(circle at top left, var(--accent), var(--accent-soft));
   color: #020617;
-  box-shadow: 0 12px 30px rgba(255, 69, 0, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 170, 255, 0.5);
 }
 
 /* ====== Sections ====== */
@@ -290,7 +291,7 @@ main {
   content: '';
   position: absolute;
   inset: -1px;
-  background: radial-gradient(circle at top left, rgba(255, 69, 0, 0.18), transparent);
+  background: radial-gradient(circle at top left, rgba(0, 170, 255, 0.18), transparent);
   opacity: 0.8;
   mix-blend-mode: screen;
   pointer-events: none;
@@ -312,7 +313,7 @@ main {
 }
 
 .hero-name {
-  background: linear-gradient(120deg, #e5e7eb, #ff4500, #ff6347);
+  background: linear-gradient(120deg, #e5e7eb, #00aaff, #33ddff);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -361,18 +362,18 @@ main {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   color: #020617;
-  box-shadow: 0 16px 35px rgba(255, 69, 0, 0.5);
+  box-shadow: 0 16px 35px rgba(0, 170, 255, 0.5);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 18px 40px rgba(255, 69, 0, 0.65);
+  box-shadow: 0 18px 40px rgba(0, 170, 255, 0.65);
 }
 
 .btn-ghost {
   background: rgba(15, 15, 15, 0.9);
   color: var(--text-main);
-  border-color: rgba(255, 69, 0, 0.5);
+  border-color: rgba(0, 170, 255, 0.5);
 }
 
 .btn-ghost:hover {
@@ -496,7 +497,7 @@ main {
   border: 2px solid #000000;
   background: radial-gradient(circle, var(--accent), var(--accent-soft));
   margin-top: 0.4rem;
-  box-shadow: 0 0 10px rgba(255, 69, 0, 0.9);
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.9);
 }
 
 .timeline-connector {
@@ -583,7 +584,7 @@ main {
   content: '';
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at top left, rgba(255, 69, 0, 0.18), transparent);
+  background: radial-gradient(circle at top left, rgba(0, 170, 255, 0.18), transparent);
   opacity: 0;
   transition: opacity var(--transition-med);
   pointer-events: none;
@@ -682,7 +683,7 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(255, 69, 0, 0.5);
+  box-shadow: 0 0 0 1px rgba(0, 170, 255, 0.5);
   background: rgba(15, 15, 15, 1);
 }
 
@@ -856,6 +857,10 @@ button:disabled {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition: none !important;
+  }
+
+  .matrix-canvas {
+    opacity: 0.08;
   }
 }
 

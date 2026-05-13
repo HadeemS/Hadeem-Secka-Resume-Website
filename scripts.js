@@ -13,7 +13,8 @@
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext('2d');
     var FONT_SIZE = 16;
-    var CHARS = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモ0123456789ABCDEF@#$%&*+-=<>/\\[]{}';
+    /* Binary rain */
+    var CHARS = '01';
     var columns = 0;
     var drops = [];
     var isMobile = window.innerWidth < 768;
@@ -38,26 +39,26 @@
     }
 
     function drawMatrix() {
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.025)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.038)';
       ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       ctx.font = FONT_SIZE + 'px monospace';
-      ctx.shadowColor = 'rgba(0, 170, 255, 0.85)';
-      ctx.shadowBlur = isMobile ? 4 : 6;
+      ctx.shadowColor = 'rgba(0, 170, 255, 0.35)';
+      ctx.shadowBlur = isMobile ? 2 : 3;
 
       for (var i = 0; i < drops.length; i++) {
         var char = CHARS[Math.floor(Math.random() * CHARS.length)];
         var x = i * FONT_SIZE;
         var y = drops[i] * FONT_SIZE;
 
-        var brightness = 0.72 + Math.random() * 0.28;
+        var brightness = 0.18 + Math.random() * 0.22;
         ctx.fillStyle = 'rgba(0, 170, 255, ' + brightness + ')';
         ctx.fillText(char, x, y);
 
         if (y > window.innerHeight && Math.random() > 0.985) {
           drops[i] = 0;
         }
-        drops[i] += 0.28 + Math.random() * 0.45;
+        drops[i] += 0.09 + Math.random() * 0.14;
       }
 
       requestAnimationFrame(drawMatrix);

@@ -5,10 +5,10 @@
 
 /* ---------- Custom Properties ---------- */
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-card: rgba(17, 17, 17, 0.75);
-  --bg-card-hover: rgba(22, 22, 22, 0.85);
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-card: rgba(12, 14, 20, 0.82);
+  --bg-card-hover: rgba(18, 22, 32, 0.9);
   --accent: #00aaff;
   --accent-dark: #0077cc;
   --accent-light: #00d4ff;
@@ -41,25 +41,13 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--nav-height) + 24px);
+  background-color: #000000;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-primary);
-  background-image:
-    repeating-linear-gradient(
-      90deg,
-      rgba(0, 170, 255, 0.06) 0px,
-      rgba(0, 170, 255, 0.06) 1px,
-      transparent 1px,
-      transparent 54px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(0, 170, 255, 0.08),
-      rgba(0, 170, 255, 0.02) 30%,
-      transparent 70%
-    );
+  background-color: #000000;
+  background-image: none;
   color: var(--text-primary);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -91,8 +79,8 @@ img {
   height: 100dvh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.4;
-  filter: contrast(1.25) brightness(1.25);
+  opacity: 0.3;
+  filter: contrast(1.05) brightness(0.78);
 }
 
 /* ---------- Container ---------- */
@@ -112,7 +100,7 @@ img {
   height: var(--nav-height);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background: rgba(10, 10, 10, 0.8);
+  background: rgba(0, 0, 0, 0.88);
   border-bottom: 1px solid var(--border);
 }
 
@@ -925,7 +913,7 @@ img {
     width: min(300px, 80vw);
     height: 100vh;
     height: 100dvh;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1262,6 +1250,6 @@ img {
   }
 
   #matrix-canvas {
-    opacity: 0.12;
+    opacity: 0.08;
   }
 }
