@@ -64,6 +64,8 @@
   var fadeElements = document.querySelectorAll('.fade-up');
 
   if ('IntersectionObserver' in window) {
+    document.body.classList.add('js-ready');
+
     var fadeObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
@@ -72,25 +74,19 @@
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -10px 0px' }
     );
 
     fadeElements.forEach(function (el) {
       fadeObserver.observe(el);
     });
-  } else {
-    fadeElements.forEach(function (el) {
-      el.classList.add('visible');
-    });
-  }
 
-  setTimeout(function () {
-    fadeElements.forEach(function (el) {
-      if (!el.classList.contains('visible')) {
+    setTimeout(function () {
+      fadeElements.forEach(function (el) {
         el.classList.add('visible');
-      }
-    });
-  }, 2000);
+      });
+    }, 1500);
+  }
 
   /* ---------- Active Nav Section Highlighting ---------- */
   const navLinks = document.querySelectorAll('.nav-link');
