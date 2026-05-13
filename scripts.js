@@ -19,21 +19,27 @@
     var isMobile = window.innerWidth < 768;
 
     function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+      var dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       isMobile = window.innerWidth < 768;
       FONT_SIZE = isMobile ? 14 : 16;
-      columns = Math.floor(canvas.width / FONT_SIZE);
+      columns = Math.floor(width / FONT_SIZE);
       var newDrops = [];
       for (var i = 0; i < columns; i++) {
-        newDrops[i] = Math.floor(Math.random() * canvas.height / FONT_SIZE);
+        newDrops[i] = Math.floor(Math.random() * height / FONT_SIZE);
       }
       drops = newDrops;
     }
 
     function drawMatrix() {
       ctx.fillStyle = 'rgba(10, 10, 10, 0.04)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       ctx.font = FONT_SIZE + 'px monospace';
 
@@ -46,7 +52,7 @@
         ctx.fillStyle = 'rgba(0, 170, 255, ' + brightness + ')';
         ctx.fillText(char, x, y);
 
-        if (y > canvas.height && Math.random() > 0.98) {
+        if (y > window.innerHeight && Math.random() > 0.98) {
           drops[i] = 0;
         }
         drops[i] += 0.3 + Math.random() * 0.5;
